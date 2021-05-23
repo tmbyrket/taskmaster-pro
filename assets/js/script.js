@@ -238,12 +238,14 @@ $("#trash").droppable({
   accept: ".card .list-group-item",
   tolerance: "touch",
   drop: function(event, ui) {
-    console.log("drop");
+    //remove dragged element from the dom
+    ui.draggable.remove();
+
   },
   over: function(event, ui) {
-    console.log("over");
+    console.log("ui");
   },
   out: function(event, ui) {
-    console.log("out");
+    console.log("ui");
   }
 });
